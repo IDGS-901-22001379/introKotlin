@@ -14,11 +14,17 @@
         android:theme="@style/Theme.Introkotlin_901"
         tools:targetApi="31">
 
-        <!-- Actividad principal que inicia la app -->
+        <!-- Actividades internas del módulo ejemplo2 -->
+        <activity android:name=".ejemplo2.ResultadoActivity" android:exported="false" />
+        <activity android:name=".ejemplo2.SaludoActivity" android:exported="false" />
+
+        <!-- Actividades del módulo ejemplo1 -->
+        <activity android:name=".ejemplo1.SumaActivity" android:exported="true" />
+
+        <!-- Actividad principal -->
         <activity
-            android:name=".ejemplo1.SumaActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Introkotlin_901">
+            android:name=".MenuActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,5 +32,5 @@
         </activity>
 
     </application>
-</manifest>
 
+</manifest>
