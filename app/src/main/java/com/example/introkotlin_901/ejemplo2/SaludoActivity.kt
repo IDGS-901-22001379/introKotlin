@@ -16,18 +16,18 @@ class SaludoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_saludo)
 
-        // Manejamos los insets del sistema
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Referencias a los elementos del layout
+
         val edtName = findViewById<EditText>(R.id.edtName)
         val btnStart = findViewById<Button>(R.id.btnStart)
 
-        // Evento click del botón
+
         btnStart.setOnClickListener {
             val nombre = edtName.text.toString().trim()
             if (nombre.isNotEmpty()) {

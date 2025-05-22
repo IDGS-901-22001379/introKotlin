@@ -12,7 +12,7 @@ class ResultadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_resusltado) // <- nombre del XML correcto
+        setContentView(R.layout.activity_resultado)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -20,7 +20,7 @@ class ResultadoActivity : AppCompatActivity() {
             insets
         }
 
-        // Obtener el nombre del intent
+        // Obtener el nombre enviado desde SaludoActivity
         val nombre = intent.getStringExtra("nombre_usuario")
 
         // Mostrar el saludo
